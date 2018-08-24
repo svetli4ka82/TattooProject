@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Kavivanar');
+.container {
+    font-family: 'Kavivanar', cursive;
+    display: -ms-grid;
+}
+
+.card {
+    width: 280px;
+    height: 345px;
+}
+
+.card-blockquote {
+    display: flow-root;
+    width: 240px;
+    height: 185px;
+}
+
+.img {
+    width: 85%;
+    height: 90%;
+    border: 2px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.pic {
+    width: 70%;
+    height: 90%;
+}
+
+.box {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    margin: 10px;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.pic {
+    height: 100%;
+}
+
+.buttons {
+    display: inline-flex;
+}
+
+h1{
+    color: black;
+    text-shadow: 2px 2px rgb(252, 227, 173);
+    font-size: 53px;
+}
+h3{
+    color: black;
+    text-shadow: 1px 1px rgb(252, 227, 173);
+}

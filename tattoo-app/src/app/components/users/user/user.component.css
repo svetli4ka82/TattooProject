@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Kavivanar');
+
+.container{
+    margin-top: 40px;
+    font-family: 'Kavivanar', cursive;
+}
+h1{
+    color: black;
+    text-shadow: 2px 2px rgb(252, 227, 173);
+    font-size: 53px;
+}
+label{
+    color: black;
+    text-shadow: 2px 2px rgb(252, 227, 173);
+    font-size: 22px;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.btn{
+    margin: 0 auto;
+}

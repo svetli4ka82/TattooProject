@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Rouge+Script');
+body {
+    font-family: 'Rouge Script', cursive;
+  background: url('../assets/pic_tattoo/texture-background.jpg');
+  background-size: cover;
+  background-repeat:no-repeat;
+}

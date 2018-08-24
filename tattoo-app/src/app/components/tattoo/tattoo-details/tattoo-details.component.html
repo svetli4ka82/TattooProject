@@ -1,0 +1,38 @@
+<div *ngIf="tattoo" class="details">
+    <div class="row space-top">
+        <div class="col-md-12">
+            <h1 class="title">Tattoo Details</h1>
+        </div>
+    </div>
+    <div class="row space-top">
+        <div class="col-md-8 ">
+            <div class="card text-white bg-primary">
+                <h2 class="pic-name">{{tattoo.nameTattoo}}</h2>
+                <div class="card-body imgInfo">
+                    <blockquote class="block-pic  card-blockquote">
+                        <img src="{{tattoo.image}}" alt="{{tattoo.name}}" class="pic" />
+                    </blockquote>
+
+                    <div class="body">
+                        <div class="tattoo-details col-md-12">
+                            <h4>Description: </h4>
+                            <p>{{tattoo.description}}</p>
+                            <h4>Model:</h4>
+                            <p> {{tattoo.model}}</p>
+                        </div>
+                        <div class="col-md-12" >
+                            <div class="hide-route" *ngIf="show()">
+                                <li class="route" >
+                                    <a routerLink="/tattoos/edit/{{id}}" style="cursor: pointer" 
+                                    class="btn btn-warning">Edit</a>
+                                </li>
+                                <button class="btn btn-danger" 
+                                 style="cursor: pointer" (click)="delete()">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

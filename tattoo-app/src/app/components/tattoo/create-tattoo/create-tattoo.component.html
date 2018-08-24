@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row space-top title">
+        <div class="col-md-12">
+            <h1>Add New Tattoo</h1>
+        </div>
+    </div>
+    <form #addForm="ngForm" (ngSubmit)="add()">
+        <div class="row space-top">
+            <div class="form-group col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" for="nameTattoo">Name</label>
+                    <input class="form-control" id="nameTattoo" type="text" required minlength="3" name="nameTattoo" [(ngModel)]="bindingModel.nameTattoo"
+                        #nameTattoo="ngModel">
+                    <div [hidden]="nameTattoo.valid || nameTattoo.pristine" class="alert alert-dark">
+                        Name Tattoo must be at least 3 symbols long.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="new-model">Model</label>
+                    <input class="form-control " id="new-model" type="text" required name="model" [(ngModel)]="bindingModel.model"
+                        #model="ngModel">
+                    <div [hidden]="model.valid || model.pristine" class="alert alert-dark">
+                        Model is required.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <div class="form-group">
+                    <label class="form-control-label" for="image">Image</label>
+                    <input class="form-control" id="image" type="text" required name="image" [(ngModel)]="bindingModel.image" #image="ngModel">
+                    <div [hidden]="image.valid || image.pristine" class="alert alert-dark">
+                        Image URL is required.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="description">Description</label>
+                    <div class="form-group">
+                        <input class="form-control" required type="text" id="description" class="form-control" [(ngModel)]="bindingModel.description"
+                            name="description" #description="ngModel" minlength="5" maxlength="25">
+                        <div [hidden]="description.valid || description.pristine" class="alert alert-dark">
+                            Description must be between 5 and 25 symbols.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input [disabled]="addForm.invalid" type="submit" class="btn btn-primary" value="Add Tattoo" />
+        </div>
+    </form>
+</div>

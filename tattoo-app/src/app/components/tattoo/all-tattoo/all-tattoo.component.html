@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row space-top title">
+        <div class="col-md-12">
+            <h1 class="text-center">Welcome to Tattoos Catalog</h1>
+            <h3 class="text-center">Select tattoo from our Catalog to view details.</h3>
+        </div>
+    </div>
+    <div class="row space-top box-pic">
+        <div *ngFor="let tattoo of tattoos | async" class="col-md-4 box">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <blockquote class="card-blockquote">
+                        <h4>{{tattoo.nameTattoo}}</h4>
+                        <div class="img">
+                            <img src="{{tattoo.image}}" alt="{{tattoo.name}}" 
+                            class="pic img-responsive" style="max-height: 200px;">
+                        </div>
+                        <p class="description">{{tattoo.description}}</p>
+                        <div class="pull-center">
+                            <a routerLink="/tattoos/details/{{tattoo.id}}" class="btn btn-info">Details</a>
+                      <!-- *ngIf="authService.isAdmin()"  -->
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

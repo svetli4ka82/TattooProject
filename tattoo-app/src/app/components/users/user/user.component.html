@@ -1,0 +1,52 @@
+<div *ngIf="bindingModel" class="container">
+  <div class="row space-top title ">
+      <div class="col-md-12">
+          <h1>Edit User Information</h1>
+      </div>
+  </div>
+  <form #editForm="ngForm" (ngSubmit)="edit()">
+      <div class="row space-top">
+          <div class="col-md-6">
+              <div class="form-group">
+                  <label class="form-control-label" for="new-make">First Name</label>
+                  <input class="form-control" id="new-make" type="text" required
+                    name="firstName" [(ngModel)]="bindingModel.firstName"
+                      #firstName="ngModel">
+                  <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-dark">
+                      First name is required.
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label class="form-control-label" for="new-model">Last Name</label>
+                  <input class="form-control" id="new-model" type="text" required
+                   name="lastName" [(ngModel)]="bindingModel.lastName" #lastName="ngModel">
+                  <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-dark">
+                      Last name is required.
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="form-group">
+                  <label class="form-control-label" for="new-image">Email</label>
+                  <input class="form-control" id="new-image" type="text" required 
+                  name="email" [(ngModel)]="bindingModel.email" #email="ngModel">
+                  <div [hidden]="email.valid || email.pristine" class="alert alert-dark">
+                    Email is required.
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <label class="form-control-label" for="new-description">Role</label>
+                  <input class="form-control" id="new-description" type="text" 
+                  pattern="\b(User|Admin)\b" name="role" 
+                  [(ngModel)]="bindingModel.role" #role="ngModel">
+                  <div [hidden]="role.valid || role.pristine" class="alert alert-dark">
+                      Role can be only Admin or User.
+                  </div>
+              </div>
+          </div>
+          <input [disabled]="editForm.invalid" type="submit" class="btn btn-primary" 
+          value="Edit User Info" />
+      </div>
+  </form>
+</div>

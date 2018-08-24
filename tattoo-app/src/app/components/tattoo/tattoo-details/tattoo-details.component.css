@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Kavivanar');
+.details {
+    font-family: 'Kavivanar', cursive;
+    text-align: center;
+}
+
+.title {
+    margin-top: 40px;
+}
+
+.row {
+    justify-content: center;
+}
+
+.pic-name {
+    padding: 15px 15px 15px 7px;
+}
+
+.card {
+    margin: 0 auto;
+    width: 35em;
+}
+
+.card-body {
+    display: inline-flex;
+    padding: 1.25rem;
+}
+
+.body {
+    margin-left: 3.5rem;
+    width: 65%;
+}
+
+.block-pic {
+    width: 15.5rem;
+    height: 13rem;
+}
+
+.pic {
+    width: 90%;
+    height: 95%;
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-left: 40px;
+}
+
+.btn {
+    margin: 10px;
+}
+
+.imgInfo {
+    display: flex;
+}
+
+.tattoo-details {
+    display: flow-root;
+    font-size: 20px;
+}
+.hide-route{
+    display: inline-flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.route{
+    text-decoration: none;
+    list-style: none;
+}
+
+h1{
+    color: black;
+    text-shadow: 2px 2px rgb(252, 227, 173);
+    font-size: 53px;
+}

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row space-top" >  <!--</div>*ngIf="authService.isAuthenticated()"> -->
+    <div class="col-md-12">
+      <h1 class="text-center"> Users List</h1>
+    </div>
+  </div>
+  <div class="row space-top personalInfo">
+    <div *ngFor="let user of users | async" class="col-md-3 box">
+      <div class="card text-white bg-primary">
+        <div class="card-body">
+          <blockquote class="card-blockquote">
+            <h5>Name: {{user.firstName}} {{user.lastName}}</h5>
+            <p class="description">{{user.email}}</p>
+            <h5>Role: {{user.role}}</h5>
+            <div class="pull-right">
+              <a routerLink="/users/edit/{{user.id}}" class="btn btn-warning">Edit User</a>
+              <a routerLink="/users/delete/{{user.id}}" class="btn btn-danger">Delete User</a>
+
+              <!-- *ngIf="authService.isAdmin()"  -->
+            </div>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

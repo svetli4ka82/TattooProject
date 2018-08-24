@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Kavivanar');
+
+.navbar{
+     font-family: 'Kavivanar', cursive;
+}
+.navbar-nav, 
+.nav-link{
+    font-size: 20px;
+    color: rgb(252, 227, 173);
+    text-shadow: 1px 1px grey;
+
+}
+
+.navbar-brand{
+    font-size: 27px;
+    color: rgb(252, 227, 173);
+}

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Kavivanar');
+.details {
+    font-family: 'Kavivanar', cursive;
+    text-align: center;
+}
+
+.title {
+    margin-top: 40px;
+}
+
+h1 {
+    color: black;
+    text-shadow: 2px 2px rgb(252, 227, 173);
+    font-size: 45px;
+}
+
+h2 {
+    color: rgb(252, 227, 173);
+    ;
+    /* text-shadow: 2px 2px rgb(252, 227, 173); */
+    font-size: 45px;
+}
+
+.row {
+    justify-content: center;
+}
+
+.card {
+    margin: 0 auto;
+    width: 35em;
+}
+
+.card-body {
+    display: inline-flex;
+    padding: 1.25rem;
+}
+
+.body {
+    margin-left: 3.5rem;
+    width: 65%;
+}
+
+.block-pic {
+    width: 15.5rem;
+    height: 13rem;
+}
+
+.btn {
+    margin: 10px;
+}
+
+.user-details {
+    display: flow-root;
+    font-size: 20px;
+}
